@@ -1,0 +1,5 @@
+tensorflow==1.9.0
+pillow
+scipy
+scikit-learn
+opencv-python

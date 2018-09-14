@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: max-facial-recognizer
+spec:
+  selector:
+    app: max-facial-recognizer
+  ports:
+  - port: 5000
+  type: NodePort
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: max-facial-recognizer
+  labels:
+    app: max-facial-recognizer
+spec:
+  selector:
+    matchLabels:
+      app: max-facial-recognizer
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: max-facial-recognizer
+    spec:
+      containers:
+      - name: max-facial-recognizer
+        image: codait/max-facial-recognizer:latest
+        ports:
+        - containerPort: 5000

@@ -5,7 +5,7 @@ ARG model_bucket=http://max-assets.s3-api.us-geo.objectstorage.softlayer.net
 ARG model_file=facenet.tar.gz
 
 # Add the missing packages for OpenCV
-RUN apt-get update && apt-get install libgtk2.0 -y
+RUN apt-get update && apt-get install libgtk2.0 -y && rm -rf /var/lib/apt/lists/*
 
 RUN wget -nv --show-progress --progress=bar:force:noscroll ${model_bucket}/${model_file} --output-document=/workspace/assets/${model_file}
 RUN tar -x -C assets/ -f assets/${model_file} -v && rm assets/${model_file}

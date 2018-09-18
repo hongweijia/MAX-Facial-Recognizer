@@ -8,7 +8,7 @@ ARG model_file=facenet.tar.gz
 RUN apt-get update && apt-get install libgtk2.0 -y
 
 RUN wget -nv --show-progress --progress=bar:force:noscroll ${model_bucket}/${model_file} --output-document=/workspace/assets/${model_file}
-RUN tar -x -C assets/ -f assets/${model_file} -v
+RUN tar -x -C assets/ -f assets/${model_file} -v && rm assets/${model_file}
 
 COPY requirements.txt /workspace
 RUN pip install -r requirements.txt

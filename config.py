@@ -7,22 +7,14 @@ RESTPLUS_MASK_SWAGGER = False
 # Application settings
 
 # API metadata
-API_TITLE = 'Model Asset Exchange Server'
-API_DESC = 'An API for serving models'
+API_TITLE = 'MAX Facial Recognizer'
+API_DESC = 'Recognize faces in an image and extract embedding vectors for each face'
 API_VERSION = '0.1'
 
 # default model
-MODEL_NAME = 'facenet'
-DEFAULT_MODEL_PATH = 'assets/{}.pb'.format(MODEL_NAME)
+MODEL_NAME = 'MAX Facial Recognizer'
+DEFAULT_MODEL_PATH = 'assets/facenet.pb'
 MODEL_LICENSE = 'MIT'
-
-MODEL_META_DATA = {
-    'id': '{}-tensorflow'.format(MODEL_NAME.lower()),
-    'name': '{} TensorFlow Model'.format(MODEL_NAME),
-    'description': '{} TensorFlow model trained on LFW data to detect faces and generate embeddings'.format(MODEL_NAME),
-    'type': 'face_recognition',
-    'license': '{}'.format(MODEL_LICENSE)
-}
 
 DEFAULT_IMAGE_SIZE = 160
 DEFAULT_BATCH_SIZE = 2

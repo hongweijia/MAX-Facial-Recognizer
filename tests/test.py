@@ -12,7 +12,7 @@ def test_swagger():
 
     json = r.json()
     assert 'swagger' in json
-    assert json.get('info') and json.get('info').get('title') == 'Model Asset Exchange Server'
+    assert json.get('info') and json.get('info').get('title') == 'MAX Facial Recognizer'
 
 
 def test_metadata():
@@ -23,10 +23,11 @@ def test_metadata():
     assert r.status_code == 200
 
     metadata = r.json()
-    assert metadata['id'] == 'facenet-tensorflow'
-    assert metadata['name'] == 'facenet TensorFlow Model'
-    assert metadata['description'] == 'facenet TensorFlow model trained on LFW data to detect faces and generate '\
-                                      'embeddings'
+    assert metadata['id'] == 'max facial recognizer-tensorflow'
+    assert metadata['name'] == 'MAX Facial Recognizer TensorFlow Model'
+    assert metadata['description'] == 'MAX Facial Recognizer TensorFlow model ' \
+                                      'trained on LFW data to detect faces and ' \
+                                      'generate embeddings'
     assert metadata['license'] == 'MIT'
 
 
@@ -35,7 +36,7 @@ def test_predict():
     model_endpoint = 'http://localhost:5000/model/predict'
 
     # Test by the image with multiple faces
-    img1_path = 'assets/codait.jpeg'
+    img1_path = 'assets/Bryan.png'
 
     with open(img1_path, 'rb') as file:
         file_form = {'image': (img1_path, file, 'image/jpeg')}

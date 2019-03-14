@@ -11,7 +11,7 @@ from maxfw.model import MAXModelWrapper
 
 import core.src.facenet as facenet
 from config import DEFAULT_MODEL_PATH, DEFAULT_IMAGE_SIZE, DEFAULT_BATCH_SIZE, \
-    DEFAULT_PREPROCESS_THREADS, MODEL_NAME
+    DEFAULT_PREPROCESS_THREADS, MODEL_NAME, MODEL_ID
 from core.src.align.align_dataset_mtcnn import load_mtcnn, run_mtcnn
 
 logger = logging.getLogger()
@@ -19,11 +19,11 @@ logger = logging.getLogger()
 class ModelWrapper(MAXModelWrapper):
 
     MODEL_META_DATA = {
-        'id': '{}-tensorflow'.format(MODEL_NAME.lower()),
-        'name': '{} TensorFlow Model'.format(MODEL_NAME),
-        'description': '{} TensorFlow model trained on LFW data to detect faces '
-                       'and generate embeddings'.format(MODEL_NAME),
-        'type': 'face_recognition',
+        'id': MODEL_ID,
+        'name': MODEL_NAME,
+        'description': 'Facial recognition model trained on LFW data to detect faces ' \
+                       'and generate embeddings',
+        'type': 'Facial Recognition',
         'license': 'MIT',
         'source': 'https://developer.ibm.com/exchanges/models/all/max-facial-recognizer/'
     }

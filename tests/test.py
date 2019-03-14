@@ -23,12 +23,14 @@ def test_metadata():
     assert r.status_code == 200
 
     metadata = r.json()
-    assert metadata['id'] == 'max facial recognizer-tensorflow'
-    assert metadata['name'] == 'MAX Facial Recognizer TensorFlow Model'
-    assert metadata['description'] == 'MAX Facial Recognizer TensorFlow model ' \
+    assert metadata['id'] == 'max-facial-recognizer'
+    assert metadata['name'] == 'MAX Facial Recognizer'
+    assert metadata['description'] == 'Facial recognition model ' \
                                       'trained on LFW data to detect faces and ' \
                                       'generate embeddings'
     assert metadata['license'] == 'MIT'
+    assert metadata['type'] == 'Facial Recognition'
+    assert 'max-facial-recognizer' in metadata['source']
 
 
 def test_predict():

@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/IBM/MAX-Facial-Recognizer.svg?branch=master)](https://travis-ci.com/IBM/MAX-Facial-Recognizer) [![Website Status](https://img.shields.io/website/http/max-facial-recognizer.max.us-south.containers.appdomain.cloud/swagger.json.svg?label=api+demo)](http://max-facial-recognizer.max.us-south.containers.appdomain.cloud/)
+[![Build Status](https://travis-ci.org/IBM/MAX-Facial-Recognizer.svg?branch=master)](https://travis-ci.org/IBM/MAX-Facial-Recognizer) [![Website Status](https://img.shields.io/website/http/max-facial-recognizer.max.us-south.containers.appdomain.cloud/swagger.json.svg?label=api+demo)](http://max-facial-recognizer.max.us-south.containers.appdomain.cloud/)
 
 # IBM Code Model Asset Exchange: Facial Recognizer
 

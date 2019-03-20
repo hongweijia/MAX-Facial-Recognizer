@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/IBM/MAX-Facial-Recognizer.svg?branch=master)](https://travis-ci.org/IBM/MAX-Facial-Recognizer) [![Website Status](https://img.shields.io/website/http/max-facial-recognizer.max.us-south.containers.appdomain.cloud/swagger.json.svg?label=api+demo)](http://max-facial-recognizer.max.us-south.containers.appdomain.cloud/)
+
 # IBM Code Model Asset Exchange: Facial Recognizer
 
 This repository contains code to instantiate and deploy a face detection and feature extraction model. The model first detects faces in an input image and then generates an embedding vector for each face. The generated embeddings can be used for downstream tasks such as classification, clustering, verification etc. The model accepts an image as input and returns the bounding box coordinates, probability and embedding vector for each face detected in the image.

@@ -4,7 +4,7 @@
 
 This repository contains code to instantiate and deploy a face detection and feature extraction model. The model first detects faces in an input image and then generates an embedding vector for each face. The generated embeddings can be used for downstream tasks such as classification, clustering, verification etc. The model accepts an image as input and returns the bounding box coordinates, probability and embedding vector for each face detected in the image.
 
-The model is based on the [FaceNet model](https://github.com/davidsandberg/facenet). The model files are hosted on [IBM Cloud Object Storage](http://max-assets.s3-api.us-geo.objectstorage.softlayer.net/facenet.tar.gz). The code in this repository deploys the model as a web service in a Docker container. This repository was developed
+The model is based on the [FaceNet model](https://github.com/davidsandberg/facenet). The model files are hosted on [IBM Cloud Object Storage](http://max-assets.s3.us.cloud-object-storage.appdomain.cloud/facial-recognizer/1.0/assets.tar.gz). The code in this repository deploys the model as a web service in a Docker container. This repository was developed
 as part of the [IBM Code Model Asset Exchange](https://developer.ibm.com/code/exchanges/models/).
 
 ## Model Metadata
